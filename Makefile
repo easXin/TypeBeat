@@ -19,5 +19,5 @@ tester.o: tester.c
 
 
 clean:
-	rm -f *~ *.o a.out code test
+	rm -f *~ *.o tester.o tester code test
 
