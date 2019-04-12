@@ -8,8 +8,8 @@ FLAGS = $(NO_DEBUG_FLAGS)
 # code.o: code.h
 #	$(CC) $(FLAGS) code.c
 
-tester: tester.c
-	$(CC) $(FLAGS) tester.c -o tester
+tester.o: tester.c
+	$(CC) $(FLAGS) tester.c -o tester.o
 
 
 
