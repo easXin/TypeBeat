@@ -1,9 +1,40 @@
 #include <stdio.h>
 
 int main(int argc, char*argv[]){
-      char*arr="I like turtles!";
-      int i=0;
-      while(*arr!='\0'){
-      puts(arr++);
-    }
+FILE *fp;
+   int c;
+   
+   fp = fopen(argv[1],"r");
+   while(1) {
+      c = fgetc(fp);
+     
+      if( feof(fp) ) { 
+         break ;
+      }
+      printf("%c", c);
+   }
+   fclose(fp);
+   
+   return(0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
