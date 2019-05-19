@@ -1,5 +1,6 @@
 CC = gcc
-
+CXX = g++
+CXXFLAGS= -Wall -g
 NO_DEBUG_FLAGS = -c -Wall -std=c11
 
 FLAGS = $(NO_DEBUG_FLAGS)
@@ -11,6 +12,8 @@ FLAGS = $(NO_DEBUG_FLAGS)
 tester.o: tester.c
 	$(CC) $(FLAGS) tester.c -o tester.o
 
+testercp: audioreader.cpp
+	$(CXX) (CXXFLAGS) -c main.cpp
 
 
 #tests: $(OBJECTS) code.c
@@ -20,4 +23,3 @@ tester.o: tester.c
 
 clean:
 	rm -f *~ *.o tester.o tester code test
-
